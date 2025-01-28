@@ -1,0 +1,109 @@
+:root {
+    --bg-color: #f4f4f4;
+    --container-bg: #ffffff;
+    --primary-color: #28a745;
+    --primary-color-hover: #218838;
+    --danger-color: #dc3545;
+    --danger-color-hover: #c82333;
+    --text-color: #333;
+    --completed-color: #888;
+    --input-padding: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: var(--input-padding);
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: var(--input-padding);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+li.completed .taskText {
+    text-decoration: line-through;
+    color: var(--completed-color);
+}
+
+.taskText {
+    word-wrap: break-word;
+    flex-grow: 1;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adiciona espaço entre os itens */
+}
+
+.removeBtn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.removeBtn:hover {
+    background-color: var(--danger-color-hover);
+}
+
+.checkbox {
+    margin-left: 10px;
+}
